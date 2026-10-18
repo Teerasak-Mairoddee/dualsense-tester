@@ -17,6 +17,12 @@ Uses the Gamepad API, so it works with most controllers.
 | --- | --- |
 | ![Connect a controller](docs/screenshots/connect.png) | <img src="docs/screenshots/mobile.png" alt="Tester on a phone" width="260"> |
 
+## Why I built this
+
+A friend asked me to repair two Xbox controllers with stick drift. I took them apart and cleaned them, but I needed a way to check my work, and I don't own an Xbox anymore. The online testers I found were riddled with ads, so I built this one to keep the work clean and efficient while I repaired.
+
+It showed me straight away whether a repair had worked. The drift test and circularity score made it obvious: one controller came back as good as new, and the other turned out to be beyond a cleaning job.
+
 ## Structure
 
 ```
