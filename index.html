@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DualSense Tester</title>
+<meta name="description" content="Test your controller for stick drift, circularity, buttons and triggers in the browser.">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/tester.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>DualSense Tester</h1>
+    <div>
+      <select id="padSelect" hidden></select>
+      <span id="padInfo" class="muted"></span>
+    </div>
+  </header>
+
+  <section id="empty">
+    <div class="big">Connect a controller</div>
+    <div>then press any button</div>
+  </section>
+
+  <div id="app" hidden>
+    <!-- Sticks -->
+    <section class="panel">
+      <h2>Sticks</h2>
+      <div class="row">
+        <div class="stick"><canvas id="stickL" width="240" height="240"></canvas><div class="readout" id="readL"></div></div>
+        <div class="stick"><canvas id="stickR" width="240" height="240"></canvas><div class="readout" id="readR"></div></div>
+      </div>
+      <label class="slider"><span>Deadzone</span><input id="deadzone" type="range" min="0" max="30" value="5"><span id="deadzoneVal">0.05</span></label>
+    </section>
+
+    <!-- Drift test -->
+    <section class="panel">
+      <h2>Drift</h2>
+      <div class="controls">
+        <button id="driftBtn" class="primary" title="Put the controller down and let go of both sticks">Start · hands off</button>
+        <span id="driftStatus" class="muted"></span>
+      </div>
+      <div class="result" id="driftResult"></div>
+    </section>
+
+    <!-- Circularity test -->
+    <section class="panel">
+      <h2>Circularity</h2>
+      <div class="controls">
+        <button id="circBtn" class="primary" title="Roll each stick slowly around its edge">Start · roll sticks</button>
+        <button id="circReset">Reset</button>
+      </div>
+      <div class="result" id="circResult"></div>
+    </section>
+
+    <!-- Buttons & triggers -->
+    <section class="panel">
+      <h2>Buttons</h2>
+      <div class="trigger"><span>L2</span><div class="bar"><i id="barL2"></i></div><span class="muted" id="valL2">0%</span></div>
+      <div class="trigger"><span>R2</span><div class="bar"><i id="barR2"></i></div><span class="muted" id="valR2">0%</span></div>
+      <div class="buttons" id="buttons"></div>
+    </section>
+  </div>
+
+  <footer>I forgot my <a href="case.html">pencil case</a></footer>
+</main>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
