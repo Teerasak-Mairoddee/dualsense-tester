@@ -1,6 +1,10 @@
 # DualSense Tester
 
-A minimalist controller tester for GitHub Pages. No build step, no dependencies.
+A minimalist controller tester that runs in the browser. No build step, no dependencies.
+
+**Live:** https://teerasak-mairoddee.github.io/dualsense-tester/
+
+![Tester with drift and circularity results](docs/screenshots/tester.png)
 
 - **Sticks:** live position, trail, and an adjustable deadzone ring
 - **Drift test:** samples both sticks at rest for 3 s and reports offset, peak, jitter and a suggested deadzone
@@ -8,6 +12,10 @@ A minimalist controller tester for GitHub Pages. No build step, no dependencies.
 - **Buttons & triggers:** every button lights up and stays highlighted once pressed; L2/R2 show analog travel
 
 Uses the Gamepad API, so it works with most controllers.
+
+| Waiting for a controller | On a phone |
+| --- | --- |
+| ![Connect a controller](docs/screenshots/connect.png) | <img src="docs/screenshots/mobile.png" alt="Tester on a phone" width="260"> |
 
 ## Structure
 
@@ -32,6 +40,7 @@ assets/
       buttons.js           button grid and trigger bars
     case/                  case page scripts (generated)
 case.html                  case page (generated)
+docs/screenshots/          README images
 ```
 
 ## Run locally
